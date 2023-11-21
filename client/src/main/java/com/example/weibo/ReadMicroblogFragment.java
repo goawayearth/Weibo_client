@@ -206,7 +206,7 @@ public class ReadMicroblogFragment extends Fragment {
             List<Comment> list = new ArrayList<Comment>();
             try {
                 String id = mMicroblog.getMicroblogID().toString();
-                String path = "http://100.65.146.41:8080/Weibo_war_exploded/get_comment?id="+id;
+                String path = "http://192.168.207.235:8080/Weibo_war_exploded/get_comment?id="+id;
 
                 System.out.println("id is :"+id);
 
@@ -272,7 +272,7 @@ public class ReadMicroblogFragment extends Fragment {
             Log.i(TAG, json);
 
             try {
-                String path = "http://10.0.2.2:8080/Weibo_war_exploded/write_comment";
+                String path = "http://192.168.207.235:8080/Weibo_war_exploded/write_comment";
                 URL url = new URL(path);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");

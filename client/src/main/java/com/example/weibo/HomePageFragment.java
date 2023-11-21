@@ -146,7 +146,7 @@ public class HomePageFragment extends Fragment {
         protected List<Microblog> doInBackground(Void... voids) {
             List<Microblog> list = new ArrayList<Microblog>();
             try {
-                String path = "http://100.65.146.41:8080/Weibo_war_exploded/get_blog";
+                String path = "http://192.168.207.235:8080/Weibo_war_exploded/get_blog";
                 URL url = new URL(path);
 
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();

@@ -74,7 +74,7 @@ public class RegisterFragment extends Fragment {
 
     public void createUser(String id,String pwd,String phone){
 
-        String path = "http://100.65.146.41:8080/Weibo_war_exploded/register?id=" + id + "&password=" + pwd+"&phone="+phone;
+        String path = "http://192.168.207.235:8080/Weibo_war_exploded/register?id=" + id + "&password=" + pwd+"&phone="+phone;
 //        String path = "http://100.65.146.41:8080/Weibo_war_exploded";
         try {
             URL url = new URL(path);

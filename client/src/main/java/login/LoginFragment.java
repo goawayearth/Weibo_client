@@ -91,7 +91,7 @@ public class LoginFragment extends Fragment {
 
     //检查账户与密码
     public void checkPassword(String id,String password) {
-        String path = "http://100.65.146.41:8080/Weibo_war_exploded/login?id=" + id + "&password=" + password;
+        String path = "http://192.168.207.235:8080/Weibo_war_exploded/login?id=" + id + "&password=" + password;
         try {
             URL url = new URL(path);
 

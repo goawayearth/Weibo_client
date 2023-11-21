@@ -88,7 +88,7 @@ public class WriteMicroblogFragment extends Fragment {
             Log.i(TAG,json);
 
             try{
-                String path = "http://100.65.146.41:8080/Weibo_war_exploded/write";
+                String path = "http://192.168.207.235:8080/Weibo_war_exploded/write";
                 URL url = new URL(path);
                 HttpURLConnection connection = (HttpURLConnection)url.openConnection();
                 connection.setRequestMethod("POST");

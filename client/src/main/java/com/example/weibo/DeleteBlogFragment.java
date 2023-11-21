@@ -63,7 +63,7 @@ public class DeleteBlogFragment extends Fragment {
             Log.i(TAG, json);
 
             try {
-                String path = "http://100.65.146.41:8080/Weibo_war_exploded/delete_blog";
+                String path = "http://192.168.207.235:8080/Weibo_war_exploded/delete_blog";
                 URL url = new URL(path);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");
