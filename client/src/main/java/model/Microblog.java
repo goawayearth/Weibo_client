@@ -14,6 +14,9 @@ public class Microblog implements Serializable {
     private String microblogTextContent;
     private int commentSum;
 
+    /*
+    SimpleDateFormat是用来格式化和解释日期的类
+     */
     private SimpleDateFormat mSDF = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
     public Microblog(){

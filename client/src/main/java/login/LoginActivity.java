@@ -7,6 +7,9 @@ import androidx.fragment.app.FragmentActivity;
 
 import util.SingleFragmentActivity;
 
+/*
+这个类继承的父类的功能是自动调用createFragment用创建组件放在空白的容器中
+ */
 public class LoginActivity extends SingleFragmentActivity {
 
     // 静态函数，可以用类名调用，方便调用和跳转到这个类，被别的类调用，引流到这个页面

@@ -1,6 +1,6 @@
 package model;
 /*
-用户信息 id  密码   电话号
+用户信息类 id  密码   电话号
 */
 public class User {
     private String id;

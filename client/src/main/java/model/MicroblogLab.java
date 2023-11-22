@@ -1,7 +1,7 @@
 package model;
 
 /*
-对微博对象进行管理
+以列表的形式对微博进行管理
  */
 
 import android.content.Context;
@@ -14,8 +14,14 @@ public class MicroblogLab {
 
     private static MicroblogLab sMicroblogLab;
 
+    /*
+    微博队列
+     */
     private List<Microblog> mMicroblogs;
 
+    /*
+    单例模式，通过get可以返回这个类的唯一的实例
+     */
     public static MicroblogLab get(Context context){
         if(sMicroblogLab == null){
             sMicroblogLab = new MicroblogLab(context);
@@ -23,6 +29,9 @@ public class MicroblogLab {
         return sMicroblogLab;
     }
 
+    /*
+    构造函数是为微博的列表进行初始化
+     */
     private MicroblogLab(Context context){
         mMicroblogs = new ArrayList<>();
     }
