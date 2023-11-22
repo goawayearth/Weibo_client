@@ -57,6 +57,7 @@ public class LoginFragment extends Fragment {
 
                 //检查用户输入的值是否为空
                 if (StringUtil.isEmpty(mId) || StringUtil.isEmpty(mPassword)){
+                    //界面提示内容
                     Toast.makeText(getActivity(),"账号和密码均不能为空！",Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -85,6 +86,7 @@ public class LoginFragment extends Fragment {
 
     private void openApp(){
         Intent intent = MainMicroblogActivity.newIntent(getActivity());
+        // 改变了MyUserInfo的ID
         MyUserInfo.get().getMyUser().setId(mId);
         startActivity(intent);
     }

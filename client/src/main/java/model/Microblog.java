@@ -1,11 +1,11 @@
 package model;
 
+//微博类 UUID是唯一标识
+
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
-
-//微博类 UUID是唯一标识
 
 public class Microblog implements Serializable {
     private UUID microblogID;

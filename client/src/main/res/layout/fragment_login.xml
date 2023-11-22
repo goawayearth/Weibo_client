@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/account"
-                android:text="zhangsan"
+                android:text=""
                 android:ems="10"
                 android:maxLength="20"
                 android:textSize="24dp"/>
@@ -65,7 +65,7 @@
                 android:ems="10"
                 android:maxLength="100"
                 android:hint="@string/pwd"
-                android:text="123456"
+                android:text=""
                 android:inputType="textPassword"
                 android:textSize="24sp"/>
         </LinearLayout>

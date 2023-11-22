@@ -50,27 +50,31 @@ public class HomePageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_homepage, container, false);
         getActivity().setTitle("主页");
-
+        //承载微博的容器
         mRecyclerView = (RecyclerView) view.findViewById(R.id.homepage);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         return view;
     }
 
+    // 进入前端执行
     @Override
     public void onResume() {
         super.onResume();
         new FetchBlogTask().execute();    //异步执行，获取首页的微博
     }
 
+
+    // 右上角的+号按钮
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.fragment_microblog_list,menu);  //新建微博
     }
 
+    // 点击微博之后
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
+    public boolean onOptionsItemSelected(MenuItem item ){
         switch(item.getItemId()){      //写微博
             case R.id.item_add_microblog:
                 Log.i(TAG,"点击了");
@@ -82,7 +86,7 @@ public class HomePageFragment extends Fragment {
         }
     }
 
-    //holder
+    //holder用户微博内容
     private class MicroblogHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         private TextView usernameTextView;
@@ -91,6 +95,7 @@ public class HomePageFragment extends Fragment {
         private Microblog mMicroblog;
 
         public MicroblogHolder(LayoutInflater inflater, ViewGroup parent){
+            // 微博列表
             super(inflater.inflate(R.layout.list_microblog_item,parent,false));
             itemView.setOnClickListener(this);
             usernameTextView = (TextView)itemView.findViewById(R.id.list_microblog_item_username);
@@ -176,6 +181,7 @@ public class HomePageFragment extends Fragment {
             return list;
         }
 
+        // 后台加载完成后，执行函数将数据传递给MicroblogAdapter
         @Override
         protected void onPostExecute(List<Microblog> microblogs) {
             mMicroblogs = microblogs;

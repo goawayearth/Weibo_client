@@ -57,15 +57,18 @@ public class ReadMicroblogFragment extends Fragment {
 
     private Button mButtonDelete;
 
+    //定义评论列表 和 微博内容
     public ReadMicroblogFragment(Microblog microblog){
         mCommentList = new ArrayList<>();
         this.mMicroblog = microblog;
     }
 
+    // 创建的时候，拉取评论
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         new FetchCommentTask().execute();
+        // true是显示顶部菜单栏，会紧接着自动调用onCreateOptionsMenu，实现顶部分享按钮
         setHasOptionsMenu(true);
     }
 

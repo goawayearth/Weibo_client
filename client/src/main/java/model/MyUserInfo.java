@@ -1,5 +1,9 @@
 package model;
 
+/*
+个人信息管理；个人信息和微博的叠加
+*/
+
 import java.util.ArrayList;
 import java.util.List;
 

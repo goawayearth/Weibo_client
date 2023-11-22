@@ -15,7 +15,8 @@ public class FlickrFetcher {
     public byte[] getUrlBytes(String urlSpec) throws Exception{
         URL url = new URL(urlSpec);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setInstanceFollowRedirects(false);    //跟踪重定向
+        connection.setInstanceFollowRedirects(false);    // 禁止跟踪重定向
+        // 获取响应头中 location 字段的值
         String redirect = connection.getHeaderField("Location");
         if (redirect != null){
             connection = (HttpURLConnection)new URL(redirect).openConnection();

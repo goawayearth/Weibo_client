@@ -99,10 +99,10 @@
                 android:layout_height="28dp"
                 android:layout_marginTop="4dp"
 
-                android:maxLength="1000"
                 android:layout_weight="1"
+                android:background="@color/white"
 
-                android:background="@color/white" />
+                android:maxLength="1000" />
 
             <Button
                 android:id="@+id/button_comment"

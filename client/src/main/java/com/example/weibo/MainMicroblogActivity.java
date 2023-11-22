@@ -43,6 +43,7 @@ public class MainMicroblogActivity extends AppCompatActivity {
             mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    //点一下按钮，就将这个按钮对应的fragment重新刷新一下就是重新new一下
                     switch (menuItem.getItemId()) {
                         case R.id.item_homepage:
                             mfragment = new HomePageFragment();

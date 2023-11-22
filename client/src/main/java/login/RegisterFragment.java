@@ -92,7 +92,7 @@ public class RegisterFragment extends Fragment {
                 Log.i(TAG,"2成功");
                 if(result.equals("success")){    //注册成功，跳转到登陆页面
                     mWarning.setText("");
-                    Log.i(TAG,"3成功");
+                    Log.i(TAG,"success 成功");
                     Intent intent = LoginActivity.newIntent(getActivity());
                     startActivity(intent);
                 }else{                            //登陆失败，将失败信息展示
