@@ -38,22 +38,34 @@ public class RegisterFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
+        /*
+        首先创建组件视图
+         */
         View view = inflater.inflate(R.layout.fragment_register, container, false);
 
+        /*
+        获取组件上的元素
+         */
         mEditTextRegisterNickName = (EditText)view.findViewById(R.id.editText_register_nickName);
         mEditTextRegisterPassword = (EditText)view.findViewById(R.id.editText_register_password);
         mEditTextRegisterPhone = (EditText)view.findViewById(R.id.editText_register_phone);
         mWarning = (TextView)view.findViewById(R.id.register_warning);
         mButtonCommit = (Button)view.findViewById(R.id.button_commit);
 
+        /*
+        监听注册按钮
+         */
         mButtonCommit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*
+                首先获取注册时三个输入框的内容
+                 */
                 mNickName = mEditTextRegisterNickName.getText().toString();
                 mPassword = mEditTextRegisterPassword.getText().toString();
                 mPhone = mEditTextRegisterPhone.getText().toString();
 
-                //检查用户输入的值是否为空
+                //检查用户输入的值是否为空，不符合就直接return,不会向服务器请求
                 if (StringUtil.isEmpty(mNickName) || StringUtil.isEmpty(mPassword)||StringUtil.isEmpty(mPhone)){
                     Toast.makeText(getActivity(),"账号 密码 手机号均不能为空！",Toast.LENGTH_SHORT).show();
                     return;
@@ -63,6 +75,7 @@ public class RegisterFragment extends Fragment {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        //调用createUser函数向服务器请求
                         createUser(mNickName,mPassword,mPhone);
                     }
                 }).start();
@@ -73,19 +86,20 @@ public class RegisterFragment extends Fragment {
     }
 
     public void createUser(String id,String pwd,String phone){
-
+//        请求路径以及携带的信息
         String path = "http://192.168.207.235:8080/Weibo_war_exploded/register?id=" + id + "&password=" + pwd+"&phone="+phone;
-//        String path = "http://100.65.146.41:8080/Weibo_war_exploded";
         try {
+            // 创建URL
             URL url = new URL(path);
-
+            // 连接服务器
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");//获取服务器数据
             connection.setReadTimeout(10000);//设置读取超时的毫秒数
             connection.setConnectTimeout(10000);//设置连接超时的毫秒数
-
+            // 响应码是OK
             if(connection.getResponseCode() == HttpURLConnection.HTTP_OK){
                 Log.i(TAG,"1成功");
+                // 获取返回值信息
                 InputStream in = connection.getInputStream();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(in));
                 String result = reader.readLine();//读取服务器进行逻辑处理后页面显示的数据
@@ -93,6 +107,7 @@ public class RegisterFragment extends Fragment {
                 if(result.equals("success")){    //注册成功，跳转到登陆页面
                     mWarning.setText("");
                     Log.i(TAG,"success 成功");
+                    // 注册成功之后再次跳转到登录页面
                     Intent intent = LoginActivity.newIntent(getActivity());
                     startActivity(intent);
                 }else{                            //登陆失败，将失败信息展示
