@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/STUDY/1Android/project/Weibo/client/src/main/res/layout/activity_trysw.xml" value="0.22826086956521738" />
         <entry key="..\:/STUDY/Android/Weibo/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/STUDY/Android/Weibo/client/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1635" />
+        <entry key="..\:/STUDY/Android/Weibo/client/src/main/res/drawable/ic_add_microblog.xml" value="0.1635" />
+        <entry key="..\:/STUDY/Android/Weibo/client/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1635" />
+        <entry key="..\:/STUDY/Android/Weibo/client/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1635" />
+        <entry key="..\:/STUDY/Android/Weibo/client/src/main/res/drawable/ic_launcher_background.xml" value="0.1635" />
+        <entry key="..\:/STUDY/Android/Weibo/client/src/main/res/drawable/ic_me.xml" value="0.1635" />
         <entry key="..\:/STUDY/Android/Weibo/client/src/main/res/layout/activity_fragment.xml" value="0.22826086956521738" />
         <entry key="..\:/STUDY/Android/Weibo/client/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/STUDY/Android/Weibo/client/src/main/res/layout/activity_main_microblog.xml" value="0.22826086956521738" />
