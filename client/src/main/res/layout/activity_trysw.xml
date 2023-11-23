@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="login.trysw">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="377dp"
+        android:layout_height="134dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="202dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="278dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="367dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="76dp"
+        android:layout_height="43dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="204dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="76dp"
+        android:layout_height="43dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="278dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="76dp"
+        android:layout_height="43dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="369dp"
+        tools:ignore="MissingConstraints" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="324dp"
+        android:layout_height="227dp"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="462dp"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
