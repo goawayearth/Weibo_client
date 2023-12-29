@@ -37,6 +37,7 @@ import model.User;
  * 关键词查找
  */
 public class MyMicroblogFragment extends Fragment {
+    private static final String ip = "192.168.221.235";
     private static final String TAG = "MyMicroblogFragment";
     private EditText mEditText;
     private Button mButton;
@@ -62,7 +63,7 @@ public class MyMicroblogFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String search = mEditText.getText().toString();
-                String path = "http://192.168.207.235:8080/Weibo_war_exploded/get_blog?search="+search;
+                String path = "http://"+ip+":8080/Weibo_war_exploded/get_blog?search="+search;
                 new FetchBlogTask(path).execute();
             }
         });

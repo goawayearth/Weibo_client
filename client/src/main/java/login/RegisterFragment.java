@@ -24,6 +24,7 @@ import java.net.URL;
 import util.StringUtil;
 
 public class RegisterFragment extends Fragment {
+    private static final String ip = "192.168.221.235";
     private static final String TAG = "RegisterFragment";
     private EditText mEditTextRegisterNickName;
     private EditText mEditTextRegisterPassword;
@@ -87,7 +88,7 @@ public class RegisterFragment extends Fragment {
 
     public void createUser(String id,String pwd,String phone){
 //        请求路径以及携带的信息
-        String path = "http://192.168.207.235:8080/Weibo_war_exploded/register?id=" + id + "&password=" + pwd+"&phone="+phone;
+        String path = "http://"+ip+":8080/Weibo_war_exploded/register?id=" + id + "&password=" + pwd+"&phone="+phone;
         try {
             // 创建URL
             URL url = new URL(path);

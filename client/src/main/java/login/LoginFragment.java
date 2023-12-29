@@ -26,6 +26,7 @@ import model.MyUserInfo;
 import util.StringUtil;
 
 public class LoginFragment extends Fragment {
+    private static final String ip = "192.168.221.235";
     private static final String TAG = "LoginFragment";
     private EditText mEditTextId;
     private EditText mEditTextPassword;
@@ -108,7 +109,7 @@ public class LoginFragment extends Fragment {
     //检查账户与密码
     public void checkPassword(String id,String password) {
         // 请求路径和携带的信息
-        String path = "http://192.168.207.235:8080/Weibo_war_exploded/login?id=" + id + "&password=" + password;
+        String path = "http://"+ip+":8080/Weibo_war_exploded/login?id=" + id + "&password=" + password;
         try {
             //字符串变成URL
             URL url = new URL(path);

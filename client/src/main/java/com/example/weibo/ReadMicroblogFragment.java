@@ -40,6 +40,7 @@ import model.Microblog;
 import model.MyUserInfo;
 
 public class ReadMicroblogFragment extends Fragment {
+    private static final String ip="192.168.221.235";
     private static final String TAG = "ReadMicroblogFragment";
     private Microblog mMicroblog;
     private TextView mMircoblogContent;
@@ -209,7 +210,7 @@ public class ReadMicroblogFragment extends Fragment {
             List<Comment> list = new ArrayList<Comment>();
             try {
                 String id = mMicroblog.getMicroblogID().toString();
-                String path = "http://192.168.207.235:8080/Weibo_war_exploded/get_comment?id="+id;
+                String path = "http://"+ip+":8080/Weibo_war_exploded/get_comment?id="+id;
 
                 System.out.println("id is :"+id);
 

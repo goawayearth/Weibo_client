@@ -40,6 +40,7 @@ import model.Microblog;
  * 微博主页
  */
 public class HomePageFragment extends Fragment {
+    private static final String ip = "192.168.221.235";
     private static final String TAG = "HomePageFragment";
     /*
     类似于滚动窗口
@@ -128,7 +129,7 @@ public class HomePageFragment extends Fragment {
                 /*
                 请求路径
                  */
-                String path = "http://192.168.207.235:8080/Weibo_war_exploded/get_blog";
+                String path = "http://"+ip+":8080/Weibo_war_exploded/get_blog";
                 URL url = new URL(path);
 
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -218,7 +219,7 @@ public class HomePageFragment extends Fragment {
             super(inflater.inflate(R.layout.list_microblog_item,parent,false));
             itemView.setOnClickListener(this);
             usernameTextView = (TextView)itemView.findViewById(R.id.list_microblog_item_username);
-            dateTextView =  (TextView)itemView.findViewById(R.id.list_microblog_item_date);
+            dateTextView = (TextView)itemView.findViewById(R.id.list_microblog_item_date);
             contentTextView = (TextView)itemView.findViewById(R.id.list_microblog_item_content);
         }
 

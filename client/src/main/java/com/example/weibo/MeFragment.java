@@ -39,6 +39,7 @@ import model.User;
  * 我的
  */
 public class MeFragment extends Fragment {
+    private static final String ip = "192.168.221.235";
     private static final String TAG = "MeFragment";
     private TextView mMeId;
     private RecyclerView mRecyclerView;
@@ -151,7 +152,7 @@ public class MeFragment extends Fragment {
             List<Microblog> list = new ArrayList<Microblog>();
             try {
                 String id = MyUserInfo.get().getMyUser().getId();
-                String path = "http://192.168.207.235:8080/Weibo_war_exploded/get_blog?id="+id;
+                String path = "http://"+ip+":8080/Weibo_war_exploded/get_blog?id="+id;
 
                 URL url = new URL(path);
 

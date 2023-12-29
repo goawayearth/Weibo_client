@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/STUDY/1Android/WeiboP/Weibo/client/src/main/res/layout/fragment_homepage.xml" value="0.24864130434782608" />
+        <entry key="..\:/STUDY/1Android/WeiboP/Weibo/client/src/main/res/layout/fragment_me.xml" value="0.24947916666666667" />
+        <entry key="..\:/STUDY/1Android/WeiboP/Weibo/client/src/main/res/layout/fragment_my_microblog.xml" value="0.15534420289855072" />
+        <entry key="..\:/STUDY/1Android/WeiboP/Weibo/client/src/main/res/layout/fragment_read_microblog.xml" value="0.2223731884057971" />
+        <entry key="..\:/STUDY/1Android/WeiboP/Weibo/client/src/main/res/layout/list_microblog_item.xml" value="0.24864130434782608" />
         <entry key="..\:/STUDY/1Android/project/Weibo/client/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1735" />
         <entry key="..\:/STUDY/1Android/project/Weibo/client/src/main/res/drawable/ic_add_microblog.xml" value="0.1635" />
         <entry key="..\:/STUDY/1Android/project/Weibo/client/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1735" />

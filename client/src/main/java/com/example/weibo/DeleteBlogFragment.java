@@ -27,7 +27,7 @@ import model.MyUserInfo;
 
 //监听删除按钮，点击时删除微博即对应评论
 public class DeleteBlogFragment extends Fragment {
-
+    private static final String ip = "192.168.221.235";
     public String TAG = "DeleteBlogFragment";
     private ImageButton mButtonDelete;
     private Microblog mMicroblog;
@@ -63,7 +63,7 @@ public class DeleteBlogFragment extends Fragment {
             Log.i(TAG, json);
 
             try {
-                String path = "http://192.168.207.235:8080/Weibo_war_exploded/delete_blog";
+                String path = "http://"+ip+":8080/Weibo_war_exploded/delete_blog";
                 URL url = new URL(path);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("POST");

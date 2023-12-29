@@ -31,6 +31,7 @@ import model.Microblog;
 import model.MyUserInfo;
 
 public class WriteMicroblogFragment extends Fragment {
+    private static final String ip = "192.168.221.235";
     private static final String TAG = "WriteMicroblogFragment";
     private EditText mEditText;
 
@@ -88,7 +89,7 @@ public class WriteMicroblogFragment extends Fragment {
             Log.i(TAG,json);
 
             try{
-                String path = "http://192.168.207.235:8080/Weibo_war_exploded/write";
+                String path = "http://"+ip+":8080/Weibo_war_exploded/write";
                 URL url = new URL(path);
                 HttpURLConnection connection = (HttpURLConnection)url.openConnection();
                 connection.setRequestMethod("POST");
